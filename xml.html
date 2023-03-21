@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <style>
+    th,td{
+      border: 3px  dotted black;
+    }
+  </style>
+<html>
+<body>
+  <h2 style="text-align:200px;">My Info</h2>
+  <table  style="border-collapse:collapse;  border: 2px solid black">
+    <tr style="  border:  solid black">
+      <th style="text-align:center">NAME</th>
+      <th style="text-align:center">ST_ID</th>
+      <th style="text-align:center">PH/NO#</th>
+      <th style="text-align:center">CNIC</th>
+      <th style="text-align:center">EMAIL</th>
+      <th style="text-align:center">University</th>
+    </tr>
+    <xsl:for-each select="catalog/cd">
+    <tr>
+      <td><xsl:value-of select="Name"/>Muhammad Saqib</td>
+      <td><xsl:value-of select="st_ID"/>17877</td>
+      <td><xsl:value-of select="Ph"/>03423934320</td>
+      <td><xsl:value-of select="cnic"/>17301-4248214-1</td>
+      <td><xsl:value-of select="email"/><a href="muhammadsaqib6902@gmail.com">muhammadsaqib6902@gmail.com</a></td>
+      <td><xsl:value-of select="University"/>INU Peshawar</td>
+      
+    </tr>
+    </xsl:for-each>
+  </table>
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>
